@@ -1,0 +1,243 @@
+/* Subscription Page Styles */
+       .subscription-container {
+  display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+        }
+        .ahsor h1{
+            text-align: center;
+            text-decoration-color: #11998e;
+            
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 60px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .basic-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .basic-card::before {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .premium-card {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            transform: scale(1.05);
+            border: 3px solid #ffd700;
+            position: relative;
+        }
+
+        .premium-card::before {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .recommendation-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #333;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .standard-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .standard-card::before {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .plan-name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+
+        .plan-price .currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+
+        .plan-price .period {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        .basic-card .plan-features li::before,
+        .premium-card .plan-features li::before,
+        .standard-card .plan-features li::before {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .subscribe-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .subscribe-btn:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: scale(1.05);
+        }
+
+        .basic-card .subscribe-btn,
+        .standard-card .subscribe-btn {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-color: transparent;
+        }
+
+        .basic-card .subscribe-btn:hover,
+        .standard-card .subscribe-btn:hover {
+            background: white;
+            color: #333;
+        }
+
+        .premium-card .subscribe-btn {
+            background: rgba(255,215,0,0.9);
+            color: #333;
+            border-color: #ffd700;
+            font-weight: 700;
+        }
+
+        .premium-card .subscribe-btn:hover {
+            background: #ffd700;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .premium-card {
+                transform: none;
+                order: -1;
+            }
+            
+            .pricing-card {
+                padding: 30px 25px;
+            }
+            
+            .plan-price {
+                font-size: 2rem;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .premium-card {
+            animation: float 3s ease-in-out infinite;
+        }
+    

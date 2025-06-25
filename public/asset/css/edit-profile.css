@@ -1,0 +1,174 @@
+      .container-p{
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #17a2b8, #20c997);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .profile-header {
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .profile-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .profile-left {
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #e91e63, #f06292);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .profile-name {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .profile-right {
+            flex: 1;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            color: white;
+        }
+
+        .appointment-stat {
+            background: linear-gradient(135deg, #17a2b8, #20c997);
+        }
+
+        .feedback-stat {
+            background: linear-gradient(135deg, #17a2b8, #20c997);
+        }
+
+        .stat-label {
+            font-size: 14px;
+        }
+
+        .stat-number {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .view-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-label {
+            color: #333;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .contact-value {
+            color: #17a2b8;
+        }
+
+        .edit-profile-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .edit-profile-btn:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .profile-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+            }
+            
+            .profile-card {
+                padding: 20px;
+            }
+            
+            .info-card {
+                padding: 20px;
+            }
+        }
